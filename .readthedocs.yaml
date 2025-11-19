@@ -1,0 +1,14 @@
+version: 2
+build:
+    os: ubuntu-lts-latest
+    tools:
+        rust: latest
+    jobs:
+        install:
+            # - cargo install --version 0.4.52 mdbook
+            - echo "install"
+        build:
+            html:
+               - mkdir bin
+               - curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.5.0/mdbook-v0.5.0-x86_64-unknown-linux-musl.tar.gz | tar -xz --directory=bin
+               - bin/mdbook build --dest-dir $READTHEDOCS_OUTPUT/html

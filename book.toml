@@ -1,0 +1,7 @@
+[book]
+authors = ["Reza Mahdi"]
+language = "en"
+src = "src"
+title = "Container Under The Hood"
+description = "A low-level followup of containers"
+
